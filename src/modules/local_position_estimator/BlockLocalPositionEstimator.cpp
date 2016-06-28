@@ -573,9 +573,12 @@ void BlockLocalPositionEstimator::correctionLogic(Vector<float, n_x> &dx)
 	float bx = dx(X_bx) + _x(X_bx);
 	float by = dx(X_by) + _x(X_by);
 	float bz = dx(X_bz) + _x(X_bz);
-	if (abs(bx) > BIAS_MAX) bx = BIAS_MAX*bx/abs(bx);
-	if (abs(by) > BIAS_MAX) by = BIAS_MAX*by/abs(by);
-	if (abs(bz) > BIAS_MAX) bz = BIAS_MAX*bz/abs(bz);
+
+	if (abs(bx) > BIAS_MAX) { bx = BIAS_MAX * bx / abs(bx); }
+
+	if (abs(by) > BIAS_MAX) { by = BIAS_MAX * by / abs(by); }
+
+	if (abs(bz) > BIAS_MAX) { bz = BIAS_MAX * bz / abs(bz); }
 }
 
 void BlockLocalPositionEstimator::detectDistanceSensors()
