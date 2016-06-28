@@ -90,7 +90,7 @@ PARAM_DEFINE_FLOAT(LPE_LDR_OFF_Z, 0.00f);
 /**
  * Accelerometer xy noise density
  *
- * Data sheet sqrt(Noise power) = 150ug/sqrt(Hz) = 0.0015 m/s^2/sqrt(Hz)
+ * Data sheet noise density = 150ug/sqrt(Hz) = 0.0015 m/s^2/sqrt(Hz)
  *
  * Larger than data sheet to account for tilt error.
  *
@@ -103,12 +103,12 @@ PARAM_DEFINE_FLOAT(LPE_LDR_OFF_Z, 0.00f);
 PARAM_DEFINE_FLOAT(LPE_ACC_XY, 0.01f);
 
 /**
- * Accelerometer z standard deviation
+ * Accelerometer z noise density
  *
- * Data sheet sqrt(Noise power) = 150ug/sqrt(Hz) = 0.0015 m/s^2/sqrt(Hz)
+ * Data sheet noise density = 150ug/sqrt(Hz) = 0.0015 m/s^2/sqrt(Hz)
  *
  * @group Local Position Estimator
- * @unit m/s^2
+ * @unit m/s^2/srqt(Hz)
  * @min 0.00001
  * @max 2
  * @decimal 4
